@@ -73,4 +73,10 @@ public:
 	 * @param v Float value to be set
 	 */
 	void setUniform1f(const std::string& name, float v);
+
+	/**
+	 * Set uniform with 1 int value
+	 * @param v Int value to be set
+	 */
+	void setUniform1i(const std::string& name, int v);
 };
