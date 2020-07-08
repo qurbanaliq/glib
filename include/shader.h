@@ -16,6 +16,7 @@
 
 #include <string>
 #include <unordered_map>
+#include <glm/glm.hpp>
 
 class Shader
 {
@@ -79,4 +80,9 @@ public:
 	 * @param v Int value to be set
 	 */
 	void setUniform1i(const std::string& name, int v);
+
+	/**
+	 * Set uniform with mat4 value
+	 */
+	void setUniformMat4fv(const std::string& name, glm::mat4& value);
 };
