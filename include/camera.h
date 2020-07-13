@@ -23,7 +23,8 @@ const float SPEED = 2.0f;
 enum CameraMovement
 {
 	FORWARD, BACKWARD,
-	LEFT, RIGHT
+	LEFT, RIGHT,
+	UPWARD, DOWNWARD
 };
 
 /**
