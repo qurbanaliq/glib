@@ -84,5 +84,10 @@ public:
 	/**
 	 * Set uniform with mat4 value
 	 */
-	void setUniformMat4fv(const std::string& name, glm::mat4& value);
+	void setUniformMat4(const std::string& name, glm::mat4& value);
+
+	/**
+	 * Set the uniform with vec3 value
+	 */
+	void setUniformVec3(const std::string& name, glm::vec3& value);
 };

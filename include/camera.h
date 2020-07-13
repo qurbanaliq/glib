@@ -82,4 +82,9 @@ public:
 	 * get the value of zoom
 	 */
 	float getZoom();
+
+	/*
+	 * get the position of the camera
+	 */
+	glm::vec3 getPosition();
 };

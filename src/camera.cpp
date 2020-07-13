@@ -88,3 +88,8 @@ float Camera::getZoom()
 {
 	return m_zoom;
 }
+
+glm::vec3 Camera::getPosition()
+{
+	return m_position;
+}
