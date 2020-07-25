@@ -12,13 +12,16 @@
 
 class Texture
 {
-private:
-	unsigned int m_ID;
-	int m_width, m_height, m_channels;
-
 public:
-	Texture(const std::string& path);
+	enum TEXTURE_TYPES { DIFFUSE, SPECULAR };
+	Texture(const std::string& path, TEXTURE_TYPES type);
 	~Texture();
 	void bind(unsigned int unit);
 	void unbind();
+	void getType() const;
+
+private:
+	unsigned int m_ID;
+	int m_width, m_height, m_channels;
+	TEXTURE_TYPES type;
 };

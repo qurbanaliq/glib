@@ -93,3 +93,8 @@ glm::vec3 Camera::getPosition()
 {
 	return m_position;
 }
+
+glm::vec3 Camera::getFront()
+{
+	return m_front;
+}

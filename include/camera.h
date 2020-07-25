@@ -87,4 +87,9 @@ public:
 	 * get the position of the camera
 	 */
 	glm::vec3 getPosition();
+
+	/*
+	 * get the front direction of the camera
+	 */
+	glm::vec3 getFront();
 };
