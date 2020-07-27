@@ -4,11 +4,11 @@
  *  Created on: Jul 8, 2020
  *      Author: 123
  */
-#include "texture.h"
+#include "ogllib/texture.h"
 #include <iostream>
 
 
-Texture::Texture(const std::string& path, TEXTURE_TYPES typ) : type(typ)
+Texture::Texture(const std::string& path, TEXTURE_TYPES typ) : mType(typ)
 {
 	stbi_set_flip_vertically_on_load(true);
 	unsigned char* data = stbi_load(path.c_str(), &m_width, &m_height, &m_channels, 0);
@@ -54,3 +54,7 @@ void Texture::unbind()
 	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
+Texture::TEXTURE_TYPES Texture::getType() const
+{
+	return mType;
+}

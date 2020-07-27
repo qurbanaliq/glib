@@ -1,6 +1,6 @@
 #define GLEW_STATIC
 #include <GL/glew.h>
-#include "shader.h"
+#include "ogllib/shader.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>

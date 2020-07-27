@@ -1,4 +1,4 @@
-#include "camera.h"
+#include "ogllib/camera.h"
 #include <iostream>
 
 Camera::Camera(glm::vec3 position,
