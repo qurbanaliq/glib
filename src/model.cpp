@@ -8,7 +8,7 @@
 #include <iostream>
 #include "ogllib/mesh.h"
 
-Model::Model(std::string& path)
+Model::Model(const std::string& path) : mPath(path)
 {
 	loadModel(path);
 }
@@ -19,7 +19,7 @@ void Model::draw(Shader& shader)
 		mesh.draw(shader);
 }
 
-void Model::loadModel(std::string& path)
+void Model::loadModel(const std::string& path)
 {
 	Assimp::Importer importer;
 	const aiScene* scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs);
@@ -81,14 +81,30 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene)
 	return Mesh(vertices, textures, indices);
 }
 
-std::vector<Texture> loadMaterialTextures(aiMaterial* mat, aiTextureType type, Texture::TEXTURE_TYPES tType)
+std::vector<Texture> Model::loadMaterialTextures(aiMaterial* mat, aiTextureType type, Texture::TEXTURE_TYPES tType)
 {
 	std::vector<Texture> textures;
 	for (unsigned int i=0; i<mat->GetTextureCount(type); i++)
 	{
 		aiString str;
 		mat->GetTexture(type, i, &str);
-		textures.push_back(Texture(str.C_Str(), tType));
+		bool skip = false;
+		std::string path = mDirectory + "/" + str.C_Str();
+		for (int j=0; j<mLoadedTextures.size(); j++)
+		{
+			if (std::strcmp(mLoadedTextures[j].getPath().data(), path.data()) == 0)
+			{
+				textures.push_back(mLoadedTextures[j]);
+				skip = true;
+				break;
+			}
+		}
+		if (!skip)
+		{
+			Texture texture(path, tType);
+			textures.push_back(texture);
+			mLoadedTextures.push_back(texture);
+		}
 	}
 	return textures;
 }

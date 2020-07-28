@@ -19,9 +19,11 @@ public:
 	void bind(unsigned int unit);
 	void unbind();
 	TEXTURE_TYPES getType() const;
+	std::string getPath() const;
 
 private:
 	unsigned int m_ID;
 	int m_width, m_height, m_channels;
 	TEXTURE_TYPES mType;
+	std::string mPath;
 };

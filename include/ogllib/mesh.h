@@ -23,6 +23,11 @@ struct Vertex
 };
 
 /*
+* Stores the textures
+*/
+
+
+/*
  * stores the mesh data
  */
 class Mesh

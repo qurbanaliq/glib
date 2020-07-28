@@ -8,7 +8,7 @@
 #include <iostream>
 
 
-Texture::Texture(const std::string& path, TEXTURE_TYPES typ) : mType(typ)
+Texture::Texture(const std::string& path, TEXTURE_TYPES typ) : mType(typ), mPath(path)
 {
 	stbi_set_flip_vertically_on_load(true);
 	unsigned char* data = stbi_load(path.c_str(), &m_width, &m_height, &m_channels, 0);
@@ -57,4 +57,9 @@ void Texture::unbind()
 Texture::TEXTURE_TYPES Texture::getType() const
 {
 	return mType;
+}
+
+std::string Texture::getPath() const
+{
+	return mPath;
 }

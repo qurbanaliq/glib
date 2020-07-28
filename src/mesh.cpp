@@ -63,6 +63,7 @@ void Mesh::draw(Shader& shader)
 			number = std::to_string(specularNr++);
 			name = "specular";
 		}
+		shader.use();
 		shader.setUniform1i("material." + name + number, i);
 	}
 	glBindVertexArray(mVao);
