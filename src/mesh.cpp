@@ -69,6 +69,8 @@ void Mesh::draw(Shader& shader)
 	glBindVertexArray(mVao);
 	glDrawElements(GL_TRIANGLES, mIndices.size(), GL_UNSIGNED_INT, 0);
 	glBindVertexArray(0);
+	for (Texture tex: mTextures)
+		tex.unbind();
 }
 
 std::vector<Vertex> Mesh::getVertices() const
