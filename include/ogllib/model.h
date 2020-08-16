@@ -16,7 +16,14 @@
 class Model
 {
 public:
+	/*
+	* Create a model given a model file path
+	*/
 	Model(const std::string& path);
+
+	/*
+	* Draws the model on the opengl screen
+	*/
 	void draw(Shader& shader);
 
 private:

@@ -14,11 +14,30 @@ class Texture
 {
 public:
 	enum TEXTURE_TYPES { DIFFUSE, SPECULAR };
+	/*
+	* Create a 2D texture given a file path of the image file
+	*/
 	Texture(const std::string& path, TEXTURE_TYPES type);
 	~Texture();
+	
+	/*
+	* Bind this texture
+	*/
 	void bind(unsigned int unit);
+
+	/*
+	* Unbind this texture
+	*/
 	void unbind();
+
+	/*
+	* Returns the type of the texture
+	*/
 	TEXTURE_TYPES getType() const;
+
+	/*
+	* Returns the file path of the texture
+	*/
 	std::string getPath() const;
 
 private:
