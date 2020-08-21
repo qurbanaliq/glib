@@ -10,6 +10,9 @@
 #include <string>
 #include <GL/glew.h>
 
+/*
+* Creates an OpenGL 2D texture from given image file path
+*/
 class Texture
 {
 public:

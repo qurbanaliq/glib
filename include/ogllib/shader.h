@@ -18,6 +18,9 @@
 #include <unordered_map>
 #include <glm/glm.hpp>
 
+/*
+* Creates an OpenGL shader program from given vertex and fragment shader files
+*/
 class Shader
 {
 private:

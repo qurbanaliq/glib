@@ -2,6 +2,9 @@
 
 #include <GL/glew.h>
 
+/*
+* This class creates a vertex buffer in OpenGL
+*/
 class Vertexbuffer
 {
     private:

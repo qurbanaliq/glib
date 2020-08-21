@@ -13,6 +13,9 @@
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
 
+/*
+* Loads a model file in OpenGL
+*/
 class Model
 {
 public:
