@@ -1,9 +1,3 @@
-/*
- * model.cpp
- *
- *  Created on: Jul 25, 2020
- *      Author: 123
- */
 #include "ogllib/model.h"
 #include <iostream>
 #include "ogllib/mesh.h"

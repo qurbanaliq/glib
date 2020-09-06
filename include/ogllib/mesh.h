@@ -1,8 +1,11 @@
 /*
  * mesh.h
+ * 
+ * This module contains a Mesh class to load a mesh from model file into an
+ * OpenGL scene by using Assimp library.
  *
- *  Created on: Jul 23, 2020
- *      Author: 123
+ * Created on: Jul 23, 2020
+ * Author: Qurban Ali (qurbanaliqureshi@gmail.com)
  */
 
 #pragma once
@@ -23,11 +26,6 @@ struct Vertex
 };
 
 /*
-* Stores the textures
-*/
-
-
-/*
  * stores the mesh data
  */
 class Mesh
@@ -41,6 +39,7 @@ private:
 	void setupMesh();
 
 public:
+
 	/*
 	 * creates new mesh object with given vertices, textures and indices
 	 */

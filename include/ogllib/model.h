@@ -1,9 +1,13 @@
 /*
  * model.h
+ * 
+ * This module contains a Model class to load a model using Assimp library into
+ * an OpenGL scene.
  *
- *  Created on: Jul 25, 2020
- *      Author: 123
+ * Created on: Jul 25, 2020
+ * Author: Qurban Ali (qurbanaliqureshi@gmail.com)
  */
+
 #pragma once
 #include "ogllib/shader.h"
 #include "ogllib/mesh.h"
@@ -19,6 +23,7 @@
 class Model
 {
 public:
+
 	/*
 	* Create a model given a model file path
 	*/

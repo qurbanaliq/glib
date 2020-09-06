@@ -1,15 +1,15 @@
 /**
  * shader.h
  *
- * Created on: Jul 1, 2020
- * Author: Qurban Ali
- *
  * Shader class is part of the ogllib, an opengl library.
  * ogllib is a library to abstract out the creation of objects
  * such as shaders, buffers, vertex arrays, etc.
  *
  * Shader class abstract out the functionality to create and use
  * vertex and fragment shaders.
+ * 
+ * Created on: Jul 1, 2020
+ * Author: Qurban Ali (qurbanaliqureshi@gmail.com)
  */
 
 #pragma once
@@ -25,7 +25,7 @@ class Shader
 {
 private:
 	unsigned int m_ID; // shader program id
-	std::unordered_map<std::string, int> m_uniformCache; // cache uniform locations
+	std::unordered_map<std::string, int> m_uniformCache; // cache uniform
 
 	std::string parseShaderSource(const std::string& filePath);
 	unsigned int createShader(unsigned int vShader, unsigned int fShader);

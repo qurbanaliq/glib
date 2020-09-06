@@ -1,3 +1,14 @@
+/*
+ * vertexbufferLayout.h
+ * 
+ * This module contains a VertexbufferLayout class to create a 
+ * vertexbufferLayout to be used in a vertex array to specify the layout of a
+ * vertexbuffer
+ *
+ * Created on: Jul 8, 2020
+ * Qurban Ali (qurbanaliqureshi@gmail.com)
+ */
+
 #pragma once
 
 #include <GL/glew.h>

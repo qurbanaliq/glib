@@ -1,3 +1,13 @@
+/*
+ * vertexbuffer.h
+ * 
+ * This module contains a Vertexbuffer class to create and bind a vertexBuffer
+ * in an OpenGL scene
+ *
+ * Created on: Jul 8, 2020
+ * Qurban Ali (qurbanaliqureshi@gmail.com)
+ */
+
 #pragma once
 
 #include <GL/glew.h>
@@ -10,6 +20,7 @@ class Vertexbuffer
     private:
         unsigned int mID;
     public:
+        
         /*
         * Create a vertex buffer object given array of data
         */

@@ -1,8 +1,12 @@
 /*
  * camera.h
- *
- *  Created on: Jul 10, 2020
- *      Author: 123
+ * 
+ * This module contains a class Camera to move around in an OpenGL scene using
+ * mouse and arrow keys. Arrow keys can be used to move to left, right, forward
+ * and backward while mouse can be used for yaw, pitch and zoom.
+ * 
+ * Created on: Jul 10, 2020
+ * Author: Qurban Ali (qurbanaliqureshi@gmail.com)
  */
 
 #pragma once
@@ -18,7 +22,7 @@ const float SENSITIVITY = 0.1f;
 const float SPEED = 2.0f;
 
 /**
- * four movement directions for camera
+ * movement directions for camera
  */
 enum CameraMovement
 {
@@ -53,26 +57,32 @@ private:
 	void updateCameraVectors();
 
 public:
+
 	/*
 	 * create a camera with given vector directions
 	 */
 	Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), float yaw = YAW, float pitch = PITCH);
+
 	/*
 	 * create a camera with given float directions
 	 */
 	Camera(float posX, float posY, float posZ, float upX, float upY, float upZ, float yaw, float pitch);
+
 	/*
 	 * get the view matrix for OpenGL
 	 */
 	glm::mat4 getViewMatrix();
+
 	/*
 	 * process keyboard input keys
 	 */
 	void processKeyboard(CameraMovement direction, float deltaTime);
+
 	/**
 	 * process amount mouse movements
 	 */
 	void processMouseMovement(float xOffset, float yOffset, bool constrainPitch=true);
+
 	/*
 	 * process amount of mouse scroll
 	 */

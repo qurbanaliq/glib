@@ -1,9 +1,13 @@
 /*
  * texture.h
+ * 
+ * This module contains a Texture class to create and bind a texture to be used
+ * in an OpenGL scene
  *
- *  Created on: Jul 8, 2020
- *      Author: 123
+ * Created on: Jul 8, 2020
+ * Qurban Ali (qurbanaliqureshi@gmail.com)
  */
+
 #pragma once
 
 #include <stbImage/stbImage.h>
@@ -17,6 +21,7 @@ class Texture
 {
 public:
 	enum TEXTURE_TYPES { DIFFUSE, SPECULAR };
+
 	/*
 	* Create a 2D texture given a file path of the image file
 	*/
@@ -46,6 +51,6 @@ public:
 private:
 	unsigned int m_ID;
 	int m_width, m_height, m_channels;
-	TEXTURE_TYPES mType;
-	std::string mPath;
+	TEXTURE_TYPES mType; // diffuse or specular
+	std::string mPath; // file path
 };

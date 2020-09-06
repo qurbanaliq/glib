@@ -1,10 +1,3 @@
-/*
- * mesh.cpp
- *
- *  Created on: Jul 23, 2020
- *      Author: 123
- */
-
 #include "ogllib/mesh.h"
 #include <GL/glew.h>
 #include <cstddef>

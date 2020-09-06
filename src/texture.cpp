@@ -1,9 +1,3 @@
-/*
- * texture.cpp
- *
- *  Created on: Jul 8, 2020
- *      Author: 123
- */
 #include "ogllib/texture.h"
 #include <iostream>
 

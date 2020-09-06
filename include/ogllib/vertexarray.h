@@ -1,3 +1,14 @@
+/*
+ * vertexarray.h
+ * 
+ * This module contains a Vertexarray class to create and bind a vertexArray
+ * in an OpenGL scene
+ *
+ * Created on: Jul 8, 2020
+ * Qurban Ali (qurbanaliqureshi@gmail.com)
+ */
+
+
 #pragma once
 
 #include "ogllib/vertexbuffer.h"
@@ -11,6 +22,7 @@ class Vertexarray
     private:
         unsigned int mID;
     public:
+        
         /*
         * Create a Vertex Array
         */
